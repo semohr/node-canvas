@@ -11,6 +11,7 @@ project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 ### Fixed
 * TextBaseline `top`, `middle` and `hanging` did not align with javascript canvas api
+* New lines are replaced by spaces in `fillText` and `strokeText` (#1363)
 
 3.0.0
 ==================

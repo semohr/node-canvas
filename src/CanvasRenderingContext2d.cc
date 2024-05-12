@@ -2425,6 +2425,11 @@ Context2d::paintText(const Napi::CallbackInfo&info, bool stroke) {
   if (!info[0].ToString().UnwrapTo(&strValue)) return;
 
   std::string str = strValue.Utf8Value();
+  //Remove /r/n from the string and replace them with a single space
+  std::replace(str.begin(), str.end(), '\r', ' ');
+  std::replace(str.begin(), str.end(), '\n', ' ');
+
+
   double x = args[0];
   double y = args[1];
   double scaled_by = 1;
